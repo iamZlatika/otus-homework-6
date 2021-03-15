@@ -1,8 +1,11 @@
-test("dummy test", () => undefined);
-
-/*
-
-import { OriginalTeam, ExpectedTeam } from "./immutability";
+import {
+  OriginalTeam,
+  ExpectedTeam,
+  originalTeamToExpectedTeam,
+  originalArrayToExpectedArray,
+  originalTeamToExpectedTeam3,
+  SomeArray,
+} from "./immutability";
 
 // Задание 1
 test("team to team", () => {
@@ -18,16 +21,16 @@ test("team to team", () => {
     roster: 25,
   };
 
-  expect(originalTeamToExpectedTeam(originalTeam)).toBe(expectedTeam);
+  expect(originalTeamToExpectedTeam(originalTeam)).toEqual(expectedTeam);
 });
 
 // Задание 2
 test("array to array", () => {
-  const originalArray = Object.freeze([1, 2, 3, 4]);
+  const originalArray = Object.freeze([1, 2, 3, 4]) as SomeArray;
 
   const expectedArray = ["two", 3, 4, 5];
 
-  expect(originalArrayToExpectedArray(originalArray)).toBe(expectedArray);
+  expect(originalArrayToExpectedArray(originalArray)).toEqual(expectedArray);
 });
 
 // Задание 3
@@ -48,7 +51,5 @@ test("team to team deep", () => {
     },
   };
 
-  expect(originalTeamToExpectedTeam(originalTeam)).toBe(expectedTeam);
+  expect(originalTeamToExpectedTeam3(originalTeam)).toEqual(expectedTeam);
 });
-
-*/
